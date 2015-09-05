@@ -1,0 +1,63 @@
+/* Body style for site =====================
+============================================*/
+
+@import "1header/header";
+@import "2content/content";
+@import "3footer/footer";
+@import "4pages/pages";
+
+/* anchor offset for fixed header */
+.anchor {
+    display: block;
+    content: "";
+    height: 150px;
+    margin: -150px 0 0;
+}
+/* Background colors */
+.bgBlue {
+	@extend %bgColorMain;
+        @extend %fontColorWhite;
+}
+.bgGrey {
+	@extend %bgColorGrey;
+        @extend %fontColor9;
+}
+.bgWhite {
+	@extend %bgColorWhite;
+        @extend %fontColor9;
+}
+
+/* back to top button */
+#testScroll  {
+	display: none;
+	@include positionfixed(auto, 20px, 30px, auto);
+	@extend %fontColor1;
+	@extend %bgColorGreyToTop;
+	@include border-radius(5px);
+	@extend %transitionAll;
+	font-size: 20px;
+	padding: 10px;
+	border: none;
+	height: 40px;
+	z-index: 99999;
+	&:hover {
+		@extend %bgColorMain;
+	}
+}
+
+@media (max-width: 767px) {
+    #testScroll {
+		@include positionfixed(auto, 20px, 80px, auto);
+    }
+    /* anchor offset for fixed header */
+    .anchor {
+		display: block;
+		content: "";
+		height: 15px;
+		margin: -15px 0 0;
+    }
+}
+
+/* styles for Responsive */
+
+//@import "mediaqueries/responsive"; // responsive will be given in each file

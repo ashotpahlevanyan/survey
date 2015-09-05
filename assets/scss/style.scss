@@ -1,0 +1,32 @@
+/* Style file for site======================
+============================================*/
+/* Font-awesome scss styles======================
+============================================*/
+$fa-font-path :	"../../bower_components/components-font-awesome/fonts" !default;
+@import "../../bower_components/components-font-awesome/scss/font-awesome";
+
+/* Bootstrap scss styles======================
+============================================*/
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/" !default;
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+/* Base elements styles====================
+===========================================*/
+@import "base/reset";
+@import "base/mixins";
+@import "base/baseElements";
+@import "base/headlines";
+@import "base/fonts";
+/*==========================================*/
+
+/*Styles for changable elements, Placeholders
+============================================*/
+
+@import "theme/placeholders";
+
+/*==========================================*/
+
+/*Styles for MAIN page elements=============
+============================================*/
+
+@import "partials/body";
