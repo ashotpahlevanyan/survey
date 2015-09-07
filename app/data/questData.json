@@ -1,0 +1,50 @@
+{
+	"nodes": [
+		{
+			"label": "<strong>Vardan</strong>"
+		},
+		{
+			"label": ""
+		},
+		{
+			"label": "Armenia"
+		},
+		{
+			"label": "Yerevan"
+		},
+		{
+			"label": "Lvovyan str. 23"
+		},
+		{
+			"label": "<strong>Armen</strong><br><u>Address:</u><br>Sundukyan str. 2<br>0051, Yerevan, Armenia"
+		}
+
+	],
+	"links": [
+		{
+			"source": 0, 
+			"target": 1,
+			"label": "address"
+		},
+		{
+			"source": 1,
+			"target": 2, 
+			"label": "country"
+		},
+		{
+			"source": 1, 
+			"target": 3, 
+			"label": "city"
+		},
+		{
+			"source": 1, 
+			"target": 4, 
+			"label": "street"
+		},
+		{
+			"source": 0, 
+			"target": 5, 
+			"label": "friendOf"
+		}
+	]
+}

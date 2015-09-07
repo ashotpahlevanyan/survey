@@ -1,4 +1,5 @@
-var app = angular.module('surveyApp', ['ngRoute', 'QuestionnaireController']);
+ app = angular.module('surveyApp', ['ngRoute']);
+
 
 //This configures the routes and associates each route with a view and a controller
 app.config(function ($routeProvider) {
