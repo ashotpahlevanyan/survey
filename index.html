@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="surveyApp">
 <head>
 	<title>Survey Application</title>
 	<meta name="keywords" content="">
@@ -19,19 +19,29 @@
 	<![endif]-->
 </head>
 <body>
-	<div class="container">
+	<div class="container"
+		data-ng-init="names=['Ashot','Armen', 'Avetik']">
 		<div class="row">
 			<div class="col-sm-6">
-				<a href="#" class="fa fa-linux"></a>
-				<a href="#" class="glyphicon glyphicon-chevron-right"></a>
+				<a href="/questionnaire" class="fa fa-linux"></a>
+				<a href="/preview" class="glyphicon glyphicon-chevron-right"></a>
 			</div>
+			<ul class="list-inline col-sm-6">
+				<li data-ng-repeat="name in names" class="col-sm-3">{{name}}</li>
+			</ul>	
 		</div>
 	</div>
 
 
+
+
+	<!-- JavaScripts files goe here -->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/controllers/controllers.js"></script>
 	<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
