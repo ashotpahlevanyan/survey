@@ -1,4 +1,20 @@
 
+app.controller('QuestionsController', ['$scope', '$http', function($scope, $http){
+    $http.get('app/data/questions.json').then(function(res) {
+        $scope.questions = res.data.questions;
+        console.log(res.data);
+    });
+    $scope.gotoPrevious = function(questionID) {
+        console.log("ID = " + questionID + ", Command: PREVIOUS");
+    }
+    $scope.gotoNext = function(questionID) {
+        console.log("ID = " + questionID + ", Command: NEXT");
+    }
+}]);
+
+
+
+
 app.controller('QuestionController', ['$scope', '$http', function($scope, $http){
 	$http.get('app/data/data.json').then(function(res) {
 		$scope.questions = res.data;
@@ -22,6 +38,7 @@ app.controller('QuestionnaireController', function ($scope) {
   ];
    
 });
+
 
 app.controller('PreviewController', function ($scope) {
     $scope.phones = [
