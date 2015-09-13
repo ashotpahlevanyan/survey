@@ -19,6 +19,7 @@
 	<![endif]-->
 </head>
 <body>
+	
 	<div class="container"
 		data-ng-init="names=['Ashot','Armen', 'Avetik']">
 		<div class="row">
@@ -26,13 +27,15 @@
 				<a href="#/questionnaire" class="fa fa-linux"></a>
 				<a href="#/preview" class="fa fa-html5"></a>
 				<a href="#/phones" class="fa fa-windows"></a>
+				<a href="#/questions" class="fa fa-windows"></a>
 			</div>
 			<ul class="list-inline col-sm-6">
 				<li data-ng-repeat="name in names" class="col-sm-3">{{name}}</li>
 			</ul>	
 		</div>
 	</div>
-	<div class="container" ng-controller="GreetingController" data-ng-init="names=['Ashot','Armen', 'Avetik']">
+	
+	<!--<div class="container" ng-controller="GreetingController" data-ng-init="names=['Ashot','Armen', 'Avetik']">
 		<div class="col-sm-2">
 		{{greeting}} User! The current date/time is <span>{{now | date:'medium'}}</span>.</div>
 		<ul class="list-inline col-sm-2">
@@ -51,16 +54,8 @@
 			</li>
 		</ul>
 	</div>
-
-	<div class="container" ng-view></div>
-
-	<div class="container" ng-controller="QuestionController">
-		<pre>
-			<code>
-				{{questions}}
-			</code>
-		</pre>
-	</div>
+-->
+	<div class="" ng-view></div>
 
 
 	<!-- JavaScripts files goe here -->
