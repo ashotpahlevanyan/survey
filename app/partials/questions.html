@@ -27,6 +27,17 @@
 						<input type="checkbox" name="choice">{{option}}
 					</label> 
 				</div>
+				<div class="radioImages" ng-show="question.type=='radioImages'">
+					<a ng-repeat="option in question.options" class="item" href="#" ng-click="selectMe()">
+						<div class="imageContainer">
+							<img src="{{option.imageSrc}}" alt="img">
+							<div class="messageContainer">
+								<span class="message">Thank you!</span>
+							</div>
+						</div>
+						<span class="optionTitle">{{option.text}}</span>
+					</a>
+				</div>
 				<div class="clearfix">
 					<button type="button" ng-click="gotoPrevious(question.id)" class="btn btn-primary pull-left">Previous</button>
 					<button type="button" ng-click="gotoNext(question.id)" class="btn btn-primary pull-right">Next</button>

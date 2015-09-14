@@ -44,6 +44,43 @@
             "title": "What do you think about charity?",
             "hint": "Please, type your answer in the field.",
             "answer": ""
+        },
+        {
+            "id": 6,
+            "type": "radioImages",
+            "title": "What do you think about charity?",
+            "hint": "Please, type your answer in the field.",
+            "options" : [
+                {
+                    "imageSrc" : "assets/images/1.png",
+                    "text"  : "Charity Name One"
+                },
+                {
+                    "imageSrc" : "assets/images/2.png",
+                    "text"  : "Charity Name Two"
+                },
+                {
+                    "imageSrc" : "assets/images/3.png",
+                    "text"  : "Charity Name Three"
+                },
+                {
+                    "imageSrc" : "assets/images/1.png",
+                    "text"  : "Charity Name Four"
+                },
+                {
+                    "imageSrc" : "assets/images/2.png",
+                    "text"  : "Charity Name Five"
+                }
+            ],
+            "answer": ""
+        },
+        {
+            "id": 7,
+            "type": "radioGrades",
+            "title": "What do you think about charity?",
+            "hint": "Please, type your answer in the field.",
+            "answer": ""
+
         }
 
     ]
