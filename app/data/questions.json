@@ -79,6 +79,63 @@
             "type": "radioGrades",
             "title": "What do you think about charity?",
             "hint": "Please, type your answer in the field.",
+            "options" : [
+                {
+                    "optionID" : "0",
+                    "optionValue"  : "0",
+                    "level" : "levelOne"
+                },
+                {
+                    "optionID" : "1",
+                    "optionValue"  : "1",
+                    "level" : "levelOne"
+                },
+                {
+                    "optionID" : "2",
+                    "optionValue"  : "2",
+                    "level" : "levelTwo"
+                },
+                {
+                    "optionID" : "3",
+                    "optionValue"  : "3",
+                    "level" : "levelTwo"
+                },
+                {
+                    "optionID" : "4",
+                    "optionValue"  : "4",
+                    "level" : "levelTwo"
+                },
+                {
+                    "optionID" : "5",
+                    "optionValue"  : "5",
+                    "level" : "levelThree"
+                },
+                {
+                    "optionID" : "6",
+                    "optionValue"  : "6",
+                    "level" : "levelThree"
+                },
+                {
+                    "optionID" : "7",
+                    "optionValue"  : "7",
+                    "level" : "levelFour"
+                },
+                {
+                    "optionID" : "8",
+                    "optionValue"  : "8",
+                    "level" : "levelFour"
+                },
+                {
+                    "optionID" : "9",
+                    "optionValue"  : "9",
+                    "level" : "levelFive"
+                },
+                {
+                    "optionID" : "10",
+                    "optionValue"  : "10",
+                    "level" : "levelFive"
+                }
+            ],
             "answer": ""
 
         }

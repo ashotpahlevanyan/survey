@@ -38,6 +38,9 @@
 						<span class="optionTitle">{{option.text}}</span>
 					</a>
 				</div>
+				<div class="radioGrades" ng-show="question.type=='radioGrades'">
+					<a ng-repeat="option in question.options" class="item {{option.level}}" href="#" ng-click="selectMe(option.optionID)">{{option.optionValue}}</a>
+				</div>
 				<div class="clearfix">
 					<button type="button" ng-click="gotoPrevious(question.id)" class="btn btn-primary pull-left">Previous</button>
 					<button type="button" ng-click="gotoNext(question.id)" class="btn btn-primary pull-right">Next</button>
