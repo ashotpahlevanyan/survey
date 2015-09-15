@@ -10,5 +10,7 @@ echo "SASS is running, happy coding bebe :-)"
 
 sudo sass --watch $dir/scss/style.scss:$dir/css/style.css  --style expanded 
 
+echo "\n DOING some Cleanup"
+sudo rm -r .sass-cache/
 echo "\n SASS finished working, GOOD BY!!!"
 
