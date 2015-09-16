@@ -10,7 +10,24 @@
 .bgGrey {
 	background-color: #eee;
 }
+$colorGreen: rgb(12, 245, 43);
 
+%fontColorGreen {
+	color : $colorGreen;
+}
+
+.questionList {
+	li {
+		margin-bottom: 20px;
+		@include border-radius(5px);
+	}
+}
+.questionTitle {
+	font-size: 30px;
+	@extend %fontColorGreen;
+	padding: 10px 15px;
+	margin-bottom: 15px;
+}
 .radioImages {
 	@extend %textAlignCenter;
 	.item {
