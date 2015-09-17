@@ -10302,16 +10302,20 @@ html {
   background-color: white;
 }
 
-.bgBlue {
-  background-color: #09a5f7;
+.bgLightBlue {
+  background-color: #10ACFE;
 }
 
-.bgGrey {
-  background-color: #eee;
+.bgPurple {
+  background-color: #B70CF0;
 }
 
 .questionTitle {
-  color: #0cf52b;
+  color: #38A614;
+}
+
+textarea, input {
+  font-size: 22px;
 }
 
 .questionList li {
@@ -10319,12 +10323,35 @@ html {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  border: 1px solid #0C48ED;
+}
+.questionList li form {
+  padding: 20px;
 }
 
 .questionTitle {
   font-size: 30px;
   padding: 10px 15px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  background-color: #0C48ED;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.radio, .checkbox {
+  padding: 20px;
+}
+.radio .option, .checkbox .option {
+  display: block;
+  font-size: 24px;
+  color: #101C9E;
+}
+.radio .option input, .checkbox .option input {
+  font-size: 24px;
+  margin-top: 12px;
+  background-color: #eee;
+  color: #101C9E;
 }
 
 .radioImages .item {
@@ -10413,6 +10440,10 @@ html {
 }
 .radioGrades .item.levelFive {
   background-color: blue;
+}
+
+.navigationButtons {
+  margin-top: 20px;
 }
 
 /* Style for footer ==============================

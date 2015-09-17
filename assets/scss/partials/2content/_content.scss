@@ -1,32 +1,59 @@
 /* Style for content ==============================
 ===================================================*/
+$colorGreen: #38A614;
+$colorDarkBlue: #101C9E;
+$colorLightBlue: #10ACFE;
+$colorMiddleBlue: #0C48ED;
 
 .bgWhite {
 	background-color: white;
 }
-.bgBlue {
-	background-color: #09a5f7;
+.bgLightBlue {
+	background-color: $colorLightBlue;
 }
-.bgGrey {
-	background-color: #eee;
+.bgPurple {
+	background-color: #B70CF0;
 }
-$colorGreen: rgb(12, 245, 43);
+
 
 %fontColorGreen {
 	color : $colorGreen;
 }
 
+textarea, input {
+	font-size: 22px;
+}
 .questionList {
 	li {
 		margin-bottom: 20px;
 		@include border-radius(5px);
+		border: 1px solid $colorMiddleBlue;
+		form {
+			padding: 20px;
+		}
 	}
 }
 .questionTitle {
 	font-size: 30px;
 	@extend %fontColorGreen;
 	padding: 10px 15px;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
+	background-color: $colorMiddleBlue;
+	@include border-radius(5px);
+}
+.radio, .checkbox {
+	padding: 20px;
+	.option {
+		display: block;
+		font-size: 24px;
+		color: $colorDarkBlue;
+		input {
+			font-size: 24px;
+			margin-top: 12px;
+			background-color: #eee;
+			color: $colorDarkBlue;
+		}
+	}
 }
 .radioImages {
 	@extend %textAlignCenter;
@@ -127,5 +154,8 @@ $colorGreen: rgb(12, 245, 43);
 	}
 }
 
+.navigationButtons {
+	margin-top: 20px;
+}
 
 
