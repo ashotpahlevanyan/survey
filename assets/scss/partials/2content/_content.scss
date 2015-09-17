@@ -4,6 +4,8 @@ $colorGreen: #38A614;
 $colorDarkBlue: #101C9E;
 $colorLightBlue: #10ACFE;
 $colorMiddleBlue: #0C48ED;
+$colorPink: #fb9c7f;
+
 
 .bgWhite {
 	background-color: white;
@@ -19,6 +21,10 @@ $colorMiddleBlue: #0C48ED;
 %fontColorGreen {
 	color : $colorGreen;
 }
+%fontColorPink {
+	color : $colorPink;
+}
+
 
 textarea, input {
 	font-size: 22px;
@@ -35,7 +41,7 @@ textarea, input {
 }
 .questionTitle {
 	font-size: 30px;
-	@extend %fontColorGreen;
+	@extend %fontColorPink;
 	padding: 10px 15px;
 	margin-bottom: 25px;
 	background-color: $colorMiddleBlue;
@@ -134,7 +140,7 @@ textarea, input {
 		}
 		&.selected {
 			background-color: green !important;
-			border: 2px solid orange;
+			border: 2px solid red;
 		}
 		&.levelOne {
 			background-color: red;
@@ -146,7 +152,7 @@ textarea, input {
 			background-color: orange;
 		}
 		&.levelFour {
-			background-color: yellow;
+			background-color: #0CED41;
 		}
 		&.levelFive {
 			background-color: blue;

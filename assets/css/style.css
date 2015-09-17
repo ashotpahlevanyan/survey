@@ -10311,7 +10311,7 @@ html {
 }
 
 .questionTitle {
-  color: #38A614;
+  color: #fb9c7f;
 }
 
 textarea, input {
@@ -10424,7 +10424,7 @@ textarea, input {
 }
 .radioGrades .item.selected {
   background-color: green !important;
-  border: 2px solid orange;
+  border: 2px solid red;
 }
 .radioGrades .item.levelOne {
   background-color: red;
@@ -10436,7 +10436,7 @@ textarea, input {
   background-color: orange;
 }
 .radioGrades .item.levelFour {
-  background-color: yellow;
+  background-color: #0CED41;
 }
 .radioGrades .item.levelFive {
   background-color: blue;
