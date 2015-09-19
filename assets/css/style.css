@@ -10077,6 +10077,9 @@ body {
 body .container {
   margin: 0 auto;
 }
+body.withSubmenu {
+  padding-top: 130px;
+}
 
 html {
   overflow-y: scroll;
@@ -10221,20 +10224,28 @@ html {
   color: #fff;
 }
 
-#testScroll {
+.submenuWrapper .submenu li a {
+  color: #B70CF0;
+}
+
+.navbar-nav li a, #testScroll {
   color: #fff;
+}
+
+.submenuWrapper .submenu li.active a {
+  color: #2d2d2d;
 }
 
 .bgGrey, .bgWhite {
   color: #606060;
 }
 
-.bgWhite {
+.navbar-header .navbar-toggle:hover, .submenuWrapper, .submenuWrapper .submenu li a, .bgWhite {
   background-color: #fff;
 }
 
-.bgBlue, #testScroll:hover {
-  background-color: #0074a2;
+.topBar, .bgBlue, #testScroll:hover {
+  background-color: #B70CF0;
 }
 
 #testScroll {
@@ -10254,9 +10265,28 @@ html {
 
 /* placeholders for repeated elements 
 =====================================*/
-.radioGrades .item:hover {
+.submenuWrapper .submenu li a {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.navbar-nav li a:active, .navbar-nav li a:hover, .navbar-nav li a:focus, .submenuWrapper .submenu li a, .submenuWrapper .submenu li a:active {
+  /* font weight for any text */
+  font-weight: bold;
+}
+
+.submenuWrapper .submenu li a {
+  /* text transform for any text*/
+  text-transform: uppercase;
+}
+
+.submenuWrapper .submenu li a, .radioGrades .item:hover {
   /* text decoration for any text */
   text-decoration: none;
+}
+
+.submenuWrapper .submenu {
+  /* list style for any list */
+  list-style: none;
 }
 
 *,
@@ -10268,9 +10298,9 @@ html {
   box-sizing: border-box;
 }
 
-.radioImages .item {
-  /* vertical align for any element*/
-  vertical-align: top;
+.navbar-nav li a, .navbar-nav li a:active, .navbar-nav li a:hover, .navbar-nav li a:focus, .navbar-header .navbar-toggle, .submenuWrapper .submenu li a:active {
+  /* background color transparent*/
+  background-color: transparent;
 }
 
 .radioImages .item {
@@ -10278,7 +10308,12 @@ html {
   vertical-align: top;
 }
 
-.radioImages, .radioImages .item, .radioImages .item .imageContainer .messageContainer, .radioGrades, .radioGrades .item {
+.radioImages .item {
+  /* vertical align for any element*/
+  vertical-align: top;
+}
+
+.navbar-nav, .radioImages, .radioImages .item, .radioImages .item .imageContainer .messageContainer, .radioGrades, .radioGrades .item {
   /* text align for any element*/
   text-align: center;
 }
@@ -10296,6 +10331,129 @@ html {
 ===================================================================*/
 /* Style for navbar ==============================
 ===================================================*/
+.topBar {
+  height: 75px;
+  display: block;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  top: 0;
+}
+.topBar .navbar-brand {
+  display: inline-block;
+  padding: 3px 10px;
+  height: auto;
+  outline: none;
+}
+.topBar .navbar-brand img {
+  display: block;
+  padding-top: 10px;
+  height: 60px;
+  width: auto;
+}
+.topBar .navbar-brand img.logoOpen {
+  display: none;
+}
+.topBar .navbar-brand:hover img.logo {
+  display: none;
+}
+.topBar .navbar-brand:hover img.logoOpen {
+  display: block;
+}
+.topBar .navbar-collapse {
+  padding-top: 6px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-nav li a {
+  display: inline-block;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 15px 15px;
+  outline: none;
+  min-width: 75px;
+}
+.navbar-nav li a:active, .navbar-nav li a:hover, .navbar-nav li a:focus {
+  border: 1px solid #fff;
+}
+.navbar-nav li a:focus {
+  border: 1px solid #fff;
+}
+
+.navbar-header {
+  margin-right: 0;
+  margin-left: 0;
+}
+.navbar-header .navbar-toggle {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 10px;
+  margin-right: 15px;
+  margin-top: 16px;
+}
+.navbar-header .navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+.navbar-header .navbar-toggle span {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+.navbar-header .navbar-toggle:hover span {
+  background-color: #B70CF0;
+}
+
+/*Style for submenu navigation =============================
+============================================================*/
+.submenuWrapper {
+  display: block;
+  z-index: 99998;
+  width: 100%;
+  border-bottom: 1px solid #B70CF0;
+  top: 75px;
+}
+.submenuWrapper .container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.submenuWrapper .submenu {
+  display: table;
+  width: 100%;
+  border: none;
+  font-size: 0;
+  text-align: left;
+}
+.submenuWrapper .submenu:first-child {
+  border-left: 1px solid #e3e3e3;
+}
+.submenuWrapper .submenu li {
+  display: inline-block;
+  vertical-align: top;
+  border-right: 1px solid #e3e3e3;
+  min-width: 50px;
+  border-bottom: 2px solid transparent;
+}
+.submenuWrapper .submenu li.active {
+  border-bottom: 2px solid #B70CF0;
+}
+.submenuWrapper .submenu li:hover {
+  border-bottom: 2px solid #B70CF0;
+}
+.submenuWrapper .submenu li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
+  padding: 5px 0px;
+  text-align: center;
+  outline: none;
+}
+
 /* Style for content ==============================
 ===================================================*/
 .bgWhite {

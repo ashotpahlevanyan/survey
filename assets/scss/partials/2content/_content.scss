@@ -1,10 +1,5 @@
 /* Style for content ==============================
 ===================================================*/
-$colorGreen: #38A614;
-$colorDarkBlue: #101C9E;
-$colorLightBlue: #10ACFE;
-$colorMiddleBlue: #0C48ED;
-$colorPink: #fb9c7f;
 
 
 .bgWhite {
@@ -14,7 +9,7 @@ $colorPink: #fb9c7f;
 	background-color: $colorLightBlue;
 }
 .bgPurple {
-	background-color: #B70CF0;
+	background-color: $colorPurple;
 }
 
 

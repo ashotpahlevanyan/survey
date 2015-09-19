@@ -1,16 +1,16 @@
-<div data-ng-controller="QuestionsController" class="container">
-	<div class="submenuWrapper">
+<div data-ng-controller="QuestionsController" class="container" ng-cloak>
+	<!--<div class="submenuWrapper">
 		<div class="submenuContainer" id="scrollSpy">
 			<ul class="submenu list-inline" role="tablist">
-				<li ng-repeat="question in questions"><a href="#id{{question.id}}"><i class="fa fa-chevron-circle-right fa-3x"></i></a></li>
+				<li ng-repeat="question in questions"><a href="#questions/#id{{question.qID}}" ng-click="navigateToID(question.qID)"><i class="fa fa-chevron-circle-right fa-3x"></i></a></li>
 			</ul>
 		</div>
-	</div>
+	</div>-->
 	<ul class="list-unstyled row questionList">
-		<li ng-repeat="question in questions" id="id{{question.id}}" ng-class-odd="'bgWhite'" ng-class-even="'bgPurple'">
+		<li ng-repeat="question in questions" id="{{question.qID}}" ng-class-odd="'bgWhite'" ng-class-even="'bgPurple'">
 			<form>
 				<!--<div class="form-group">
-					<span>{{question.id}}</span>
+					<span>{{question.qID}}</span>
 					<span>{{question.type}}</span>
 					<span>{{question.hint}}</span>
 					<ul class="list-unstyled">
@@ -52,8 +52,8 @@
 					<a ng-repeat="option in question.options" class="item {{option.level}}" href="#" ng-click="selectMe(option.optionID)">{{option.optionValue}}</a>
 				</div>
 				<div class="clearfix navigationButtons">
-					<button type="button" ng-click="gotoPrevious(question.id)" class="btn btn-primary pull-left"><i class="glyphicon glyphicon-arrow-left"></i></button>
-					<button type="button" ng-click="gotoNext(question.id)" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-arrow-right "></i></button>
+					<button type="button" ng-click="gotoPrevious(question.qID)" class="btn btn-primary pull-left"><i class="glyphicon glyphicon-arrow-left"></i></button>
+					<button type="button" ng-click="gotoNext(question.qID)" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-arrow-right "></i></button>
 				</div>
 			</form>
 		</li>

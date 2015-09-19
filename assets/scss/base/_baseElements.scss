@@ -24,6 +24,9 @@ body {
 	.container {
 		margin: 0 auto;
 	}
+	&.withSubmenu {
+		padding-top: 130px;
+	}
 }
 
 html {
