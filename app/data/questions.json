@@ -1,21 +1,21 @@
 {
     "questions" : [
         {
-            "id": 1,
+            "qID": "id1",
             "type": "textarea",
             "title": "What do you think about charity?",
             "hint": "Please, type your answer in the field.",
             "answer": ""
         },
         {
-            "id": 2,
+            "qID": "id2",
             "type": "email",
             "title": "What do you think about charity?",
             "hint": "Please, type your email address",
             "answer": "name@domain.com"
         },
         {
-            "id": 3,
+            "qID": "id3",
             "type": "radio",
             "title": "What do you think about charity?",
             "hint": "Please, choose one of the options.",
@@ -27,7 +27,7 @@
             "answer": ""
         },
         {
-            "id": 4,
+            "qID": "id4",
             "type": "checkbox",
             "title": "What do you think about charity?",
             "hint": "Please, choose one or more options",
@@ -39,14 +39,14 @@
             "answer": ""
         },
         {
-            "id": 5,
+            "qID": "id5",
             "type": "text",
             "title": "What do you think about charity?",
             "hint": "Please, type your answer in the field.",
             "answer": ""
         },
         {
-            "id": 6,
+            "qID": "id6",
             "type": "radioImages",
             "title": "What do you think about charity?",
             "hint": "Please, type your answer in the field.",
@@ -75,7 +75,7 @@
             "answer": ""
         },
         {
-            "id": 7,
+            "qID": "id7",
             "type": "radioGrades",
             "title": "What do you think about charity?",
             "hint": "Please, type your answer in the field.",

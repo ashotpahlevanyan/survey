@@ -18,23 +18,64 @@
 	<script type="text/javascript" src="assets/js/respond.js"></script>
 	<![endif]-->
 </head>
-<body>
-	
-	<div class="container"
+<body class="withSubmenu">
+	<div class="topBar hidden-xs">
+		<nav class="navbar container" role="navigation">
+				<!-- Brand and toggle get grouped for better mobile display -->
+			<a class="navbar-brand" href="index.html">
+				<img class="logo" src="assets/images/logo.png" alt="logo">
+				<img class="logoOpen" src="assets/images/logoOpen.png" alt="logo">
+			</a>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBarCollapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="navBarCollapse">
+				<ul class="nav navbar-nav">
+				<li><a href="#"><i class="fa fa-home fa-2x"></i></a></li><!-- 
+				--><li><a href="#/questionnaire"><i class="fa fa-linux fa-2x"></i></a></li><!-- 
+				--><li><a href="#/preview"><i class="fa fa-html5 fa-2x"></i></a></li><!-- 
+				--><li><a href="#/phones"><i class="fa fa-windows fa-2x"></i></a><!-- 
+				--><li><a href="#/questions"><i class="fa fa-camera-retro fa-2x"></i></a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right userMenu">
+					<li>
+				 		<a href=""><i class="fa fa-cog fa-2x"></i></a>
+				 	</li><!--
+				 --><li>
+				 		<a href=""><i class="fa fa-sign-out fa-2x"></i></a>
+				 	</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
+	</div>
+    
+    <div class="submenuWrapper navbar-fixed-top hidden-xs" ng-controller="QuestionsController">
+        <div class="container submenuContainer" id="scrollSpy1">
+            <ul class="submenu nav six" role="tablist">
+               <li ng-repeat="question in questions"><a href="#questions/#{{question.qID}}" ng-click="navigateToID(question.qID)"><i class="fa fa-chevron-circle-right fa-3x"></i></a></li>
+            </ul>
+            <!--  ng-click="navigateToID(question.qID)"-->
+        </div>
+    </div>
+	<!--<div class="container"
 		<div class="row">
 			<div class="col-sm-6">
 				<a href="#/questionnaire" class="fa fa-linux fa-3x"></a>
 				<a href="#/preview" class="fa fa-html5 fa-3x"></a>
 				<a href="#/phones" class="fa fa-windows fa-3x"></a>
 				<a href="#/questions" class="fa fa-camera-retro fa-3x"></a>
-			</div>
-			<ul class="list-inline col-sm-6">
-				<li data-ng-repeat="name in names" class="col-sm-3">{{name}}</li>
-			</ul>	
+			</div>	
 		</div>
 	</div>
 	
-	<!--<div class="container" ng-controller="GreetingController" data-ng-init="names=['Ashot','Armen', 'Avetik']">
+	<div class="container" ng-controller="GreetingController" data-ng-init="names=['Ashot','Armen', 'Avetik']">
 		<div class="col-sm-2">
 		{{greeting}} User! The current date/time is <span>{{now | date:'medium'}}</span>.</div>
 		<ul class="list-inline col-sm-2">

@@ -1,3 +1,116 @@
 /* Style for navbar ==============================
 ===================================================*/
 
+.topBar {
+	@extend %bgColorMain;
+	height: 75px;
+	display: block;
+	position: fixed;
+	z-index: 99999;
+	width: 100%;
+	top: 0;
+	
+	.navbar-brand {
+		display: inline-block;
+		padding: 3px 10px;
+		height: auto;
+		outline: none;
+		img {
+			display: block;
+			padding-top: 10px;
+			height: 60px;
+			width: auto;
+			&.logoOpen {
+				display: none;
+			}
+		}
+
+		&:hover {
+			img {
+				&.logo {
+					display: none;
+				}
+				&.logoOpen {
+					display: block;
+				}
+			}
+		}
+	}
+	.navbar-header {
+		button {
+			.sr-only {
+
+			}
+			.icon-bar {
+
+			}
+		}
+	}
+	.collapse {
+
+	}
+	.navbar-collapse {
+		padding-top: 6px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.navbar-right {
+		//margin-right: 0;
+	}
+}
+
+.navbar-nav {
+	@extend %textAlignCenter;
+	li {
+		a {
+			@extend %bgColorTransparent;
+			//@extend %textTransformUpper;
+			@extend %fontColor1;
+			//@extend %fontOpenSans;
+			display: inline-block;
+			@include border-radius(5px);
+			border: 1px solid transparent;
+			padding: 15px 15px;
+			outline: none;
+			min-width: 75px;
+			//font-size: 14px;
+			&:active, &:hover, &:focus {
+				@extend %fontStrong;
+				@extend %bgColorTransparent;
+				border: 1px solid $colorWhite;
+			}
+			&:focus {
+				@extend %bgColorTransparent;
+				border: 1px solid $colorWhite;
+			}
+		}
+	}
+}
+
+.navbar-header {
+	margin-right: 0;
+	margin-left: 0;
+	.navbar-toggle {
+		@extend %bgColorTransparent;
+		@include border-radius(5px);
+		border: 1px solid $colorWhite;
+		padding: 10px;
+		margin-right: 15px;
+		margin-top: 16px;
+		.icon-bar + .icon-bar {
+    		margin-top: 3px;
+    	}
+		span {
+			width: 20px;
+			height: 2px;
+			background-color: #fff;
+		}
+		&:hover {
+			@extend %bgColorWhite;
+			span {
+				background-color: $colorMain;
+			}
+		}
+		
+	}
+}

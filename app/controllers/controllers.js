@@ -4,22 +4,59 @@ app.controller('QuestionsController', ['$scope', '$http', function($scope, $http
         $scope.questions = res.data.questions;
         console.log(res.data);
     });
+    calculateIDs = function() {
+		var tmp = [];
+		for (i = 0; i < $scope.questions.length; i++) {
+			var tmpid = $scope.questions[i].qID;
+			tmp.push(tmpid);
+		}
+		return tmp;
+    }
+    
+    
+    $scope.getNextID = function(questionID) {
+    	$scope.ids = calculateIDs();
+    	var indx = $scope.ids.indexOf(questionID);
+    	if(indx == $scope.ids.length - 1) {
+    		return $scope.ids[0];
+    	}
+    	else {
+    		return $scope.ids[indx + 1];
+    	}
+    }
+    $scope.getPrevID = function(questionID) {
+    	$scope.ids = calculateIDs();
+    	var indx = $scope.ids.indexOf(questionID);
+    	if(indx == 0) {
+    		return $scope.ids[$scope.ids.length - 1];
+    	}
+    	else {
+    		return $scope.ids[indx - 1];
+    	}
+    }
     $scope.gotoPrevious = function(questionID) {
-        console.log("ID = " + questionID + ", Command: PREVIOUS");
+        $scope.navigateToID($scope.getPrevID(questionID), 200);
     }
     $scope.gotoNext = function(questionID) {
-        console.log("ID = " + questionID + ", Command: NEXT");
+        $scope.navigateToID($scope.getNextID(questionID), 200);
+    }
+    $scope.navigateToID = function(questionID) {
+        goToByScroll(questionID, 1000);
+    }
+    
+    var navOffset = parseInt($('body.withSubmenu').css('padding-top'));
+    function goToByScroll(id, time){
+        $('html,body').animate({scrollTop: $("#"+id).offset().top - navOffset},time);
+        return false;
     }
 }]);
 
 
-
-
 app.controller('QuestionController', ['$scope', '$http', function($scope, $http){
-	$http.get('app/data/data.json').then(function(res) {
-		$scope.questions = res.data;
-		console.log(res.data);
-	});
+	// $http.get('app/data/data.json').then(function(res) {
+	// 	$scope.questions = res.data;
+	// 	console.log(res.data);
+	// });
 }]);
 
 app.controller('GreetingController',function($scope){

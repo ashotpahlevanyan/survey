@@ -1,0 +1,62 @@
+/*Style for submenu navigation =============================
+============================================================*/
+
+.submenuWrapper {
+	display: block;
+	@extend %bgColorWhite; 
+	z-index: 99998;
+	width: 100%;
+	border-bottom: 1px solid $colorMain;
+	top: 75px;
+	.container {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	.submenu {
+		display: table;
+		@extend %listStyleNone;
+		width: 100%;
+		border: none;
+		font-size: 0;
+		text-align: left;
+		
+		&:first-child {
+			border-left: 1px solid $colorBorderSubNav;
+		}
+		li {
+			display: inline-block;
+			vertical-align: top;
+			border-right: 1px solid $colorBorderSubNav;
+			min-width: 50px;
+			border-bottom: 2px solid transparent;
+			&.active {
+				border-bottom: 2px solid $colorMain;
+				a {
+					@extend %fontColor3;
+				}
+			}
+			&:hover {
+				border-bottom: 2px solid $colorMain;
+			}
+			a {
+				display: block;
+				height: 100%;
+				width: 100%;
+				@extend %bgColorWhite;
+				@extend %textTransformUpper;
+				@extend %fontColorMain;
+				@extend %fontOpenSans;
+				font-size: 12px;
+				@extend %fontStrong;
+				@extend %textDecorNone;
+				padding: 5px 0px;
+    			text-align: center;
+    			outline: none;
+				&:active {
+					@extend %fontStrong;
+					@extend %bgColorTransparent;
+				}
+			}
+		}
+	}
+}
